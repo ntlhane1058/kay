@@ -28,7 +28,7 @@ pool.getConnection((err, connection) => {
     console.error('Error connecting to MySQL:', err.stack);
     return;
   }
-  console.log('Connected to MySQL with ID', connection.threadId);
+  console.log('Connected to MySQL');
   connection.release(); // Release the connection back to the pool
 });
 
@@ -56,7 +56,7 @@ app.get('/api/users', (req, res) => {
 });
 
 // Start the server
-const PORT = 5000;
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
